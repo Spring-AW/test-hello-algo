@@ -12,3 +12,12 @@ struct ListNode {
         
     }
 };
+
+void freeMemoryLinkedList(ListNode *cur) {
+    ListNode *pre;
+    while (cur != nullptr) {
+        pre = cur;
+        cur = cur->next;
+        delete pre;
+    }
+}
